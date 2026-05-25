@@ -20,12 +20,13 @@ jobs:
      - name: Checkout the repository to the runner
        uses: actions/checkout@v2
 
+     - name: Configure access from root
+       id: access
+       run: sudo cp -fr /root/.kube $HOME/
+
      - name: K8s Control Apply
        id: apply
        run: kubectl apply -f pyweb.yml
-
-
-
 
 
 
