@@ -30,7 +30,7 @@ spec:
         - containerPort: 5000
 
       - name: redis
-        Image: redis:alpine
+        image: redis:alpine
 ---
 apiVersion: v1
 kind: Service
