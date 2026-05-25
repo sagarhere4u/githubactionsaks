@@ -10,6 +10,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pyweb-deployment
+  namespace: pyweb
   labels:
     app: pyweb
 spec:
@@ -34,7 +35,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:   
-  name: pyweb-service  
+  name: pyweb-service
+  namespace: pyweb
   labels:     
     app: pyweb
 spec:   
